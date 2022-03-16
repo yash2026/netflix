@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Netflix    
+{% endblock  %}
+    
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'content/index.css' %}">
+{% endblock %}
+    
+{% block content %}
+<div class="navigation">
+    <div class="logo">
+        <div class="logo_img">
+            <img src="{% static 'content/images/logo.png' %}" alt="Netflix.logo">
+        </div>
+    </div>
+    <div class="logo_language">
+        <div class="language">
+            <!-- <img src="./img/language-logo.png" alt=""> -->
+                <select class="select_language" name="language" id="selectLanguage">
+                    <option class="option" value="english" selected>English</option>
+                    <option class="option" value="hindi">Hindi</option>
+                </select>
+        </div>
+    </div>
+    <div class="logo_btn">
+         <button class="signin" type="submit">Sign In</button>
+    </div>
+</div>
+
+<!-- hero  -->
+<div class="hero_container">
+    <div class="hero_title">
+        <h1 class="title_text">Unlimited movies,<br>
+             TV shows and more.</h1>
+        <p class="title_para">Watch anywhere. Cancel anytime.</p>  
+        <span class="title_span">Ready to watch? Enter your email to create or restart your membership.</span> 
+        <div class="email">
+            <input type="email" name="email" id="email" placeholder="Email Adress">
+            <button type="submit">Get Started ></button>
+        </div>  
+    </div>
+</div>
+<br>
+{% endblock content %}
+    
+    
